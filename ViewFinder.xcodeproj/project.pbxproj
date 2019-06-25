@@ -15,6 +15,7 @@
 		18E9AF2C22C140240056DA24 /* ViewFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E9AF2B22C140240056DA24 /* ViewFinderUITests.swift */; };
 		18E9AF3A22C14A740056DA24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E9AF3922C14A740056DA24 /* Main.storyboard */; };
 		18E9AF3C22C14BF30056DA24 /* AddPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E9AF3B22C14BF30056DA24 /* AddPhoto.swift */; };
+		18E9AF3E22C167C10056DA24 /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E9AF3D22C167C10056DA24 /* PostTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		18E9AF2D22C140240056DA24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18E9AF3922C14A740056DA24 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
 		18E9AF3B22C14BF30056DA24 /* AddPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhoto.swift; sourceTree = "<group>"; };
+		18E9AF3D22C167C10056DA24 /* PostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				18E9AF1722C140240056DA24 /* Info.plist */,
 				18E9AF0F22C140210056DA24 /* ViewFinder.xcdatamodeld */,
 				18E9AF3B22C14BF30056DA24 /* AddPhoto.swift */,
+				18E9AF3D22C167C10056DA24 /* PostTableViewController.swift */,
 			);
 			path = ViewFinder;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18E9AF1122C140210056DA24 /* ViewFinder.xcdatamodeld in Sources */,
+				18E9AF3E22C167C10056DA24 /* PostTableViewController.swift in Sources */,
 				18E9AF3C22C14BF30056DA24 /* AddPhoto.swift in Sources */,
 				18E9AF0922C140210056DA24 /* AppDelegate.swift in Sources */,
 			);
