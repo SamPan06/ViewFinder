@@ -12,7 +12,10 @@ class AddPhoto: UIViewController, UIImagePickerControllerDelegate, UINavigationC
 
     var imagePicker = UIImagePickerController()
     
+    @IBOutlet weak var captionText: UITextField!
+    
     @IBOutlet weak var ImageView: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,12 +35,31 @@ class AddPhoto: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         
         present (imagePicker, animated: true, completion: nil)
     }
-    internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         if let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             ImageView.image = selectedImage
         }
         imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func addPhotoTapped(_ sender: UIButton) {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            
+            let photoToSave = Photos(entity: Photos.entity(), insertInto: context)
+            
+            photoToSave.caption = captionText.text
+            
+            if let userImage = ImageView.image {
+                if let userImageData = userImage.pngData() {
+                    photoToSave.imageData = userImageData
+                }
+            }
+            (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+
+             navigationController?.popViewController(animated: true)
+        }
     }
 }
     /*
